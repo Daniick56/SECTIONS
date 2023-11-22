@@ -1,17 +1,16 @@
 //EJERCICIO NUMERO 2
 /*2. Cree un programa que lea un número y muestre si éste es par o impar*/
 
-let num;
-while (isNaN(num)) {
-    num = parseFloat(prompt("Ingresa el primer número"));
-        if (isNaN(num)) {
-            alert("Ingresa un valor numérico.");
-        }
+let number;
+while (isNaN(number)) {
+    number = parseFloat(prompt("Enter the number"));
+    if (isNaN(number)) {
+        alert("Enter a numerical value.");
+    }
 }
 
-if (num % 2 == 0) {
-    alert("El número es par.");
-}
-else if (num % 2 != 0) {
-    alert("El número es impar");
+if (number % 2 === 0) {
+    alert("The number is even.");
+} else if (number % 2 !== 0) {
+    alert("The number is odd.");
 }

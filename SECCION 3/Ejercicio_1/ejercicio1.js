@@ -2,17 +2,16 @@
 /*1. Cree un programa que lea la edad de un usuario e imprima un mensaje que diga si el usuario es mayor de
 edad o no*/
 
-let edad;
-while (isNaN(edad)) {
-    edad = parseInt(prompt("Ingresa tu edad"));
-        if (isNaN(edad)) {
-            alert("Ingresa un dato numérico");
-        }
+let age;
+while (isNaN(age)) {
+    age = parseInt(prompt("Enter your age"));
+    if (isNaN(age)) {
+        alert("Enter a numerical value");
+    }
 }
 
-if (edad < 18) {
-    alert("Usted es menor de edad.");
-}
-else {
-    alert("Usted es mayor de edad.");
+if (age < 18) {
+    alert("You are under 18 years old.");
+} else {
+    alert("You are 18 years old or older.");
 }

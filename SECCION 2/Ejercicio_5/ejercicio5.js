@@ -4,13 +4,13 @@
 imprima su precio final si éste tiene siempre un
 descuento del 10%.*/
 
-let precio;
-    while (isNaN(precio)) {
-        precio = parseFloat(prompt("Introduce el precio del producto"));
-        if (isNaN(precio)) {
-            alert("Introduce un precio válido");
-        }
+let price;
+while (isNaN(price)) {
+    price = parseFloat(prompt("Enter the price of the product"));
+    if (isNaN(price)) {
+        alert("Enter a valid price");
     }
+}
 
-let descuento = precio * 0.9
-alert("EL precio con el descuento del 10% es de: " + descuento);
+let discount = price * 0.9;
+alert("The price with a 10% discount is: " + discount);

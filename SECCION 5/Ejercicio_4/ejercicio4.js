@@ -3,17 +3,19 @@
 
 let n;
 while (isNaN(n)) {
-    n = parseInt(prompt("Ingresa un número para calcular su factorial"));
-        if (isNaN(n)) {
-            alert("Ingresa un valor numérico");
-        }
+    n = parseInt(prompt("Enter a number to calculate its factorial"));
+    if (isNaN(n)) {
+        alert("Enter a numerical value");
+    }
 }
+
 function factorial(n) {
     let result = 1;
     for (let i = 1; i <= n; i++) {
-      result *= i;
-    //Es lo mismo que decir result = result * i;
+        result *= i;
+        // Same as saying result = result * i;
     }
     return result;
 }
+
 alert(factorial(n));

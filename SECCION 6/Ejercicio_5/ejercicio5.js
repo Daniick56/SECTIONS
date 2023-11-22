@@ -5,13 +5,13 @@ programa se detendrá, de lo contrario continuará ejecutándose.*/
 
 function leaveProgram() {
     let input;
-    while (input != "s") {
-        input = prompt("Deseas salir del programa? (S/N)").toLowerCase();
-        if (input != "s") {
-            alert("Usted no ha salido del programa");
-        }  
+    while (input !== "s") {
+        input = prompt("Do you want to exit the program? (Y/N)").toLowerCase();
+        if (input !== "s") {
+            alert("You have not exited the program");
+        }
     }
-    alert("Usted ha salido del programa.");
+    alert("You have exited the program.");
 }
 
 leaveProgram();

@@ -2,23 +2,23 @@
 /*4. Cree un programa que tome el precio de un producto e 
 imprima su precio final al consumidor con un IVA de 19%.*/
 
-let precioBase;
-    while (isNaN(precioBase)) {
-        precioBase = parseFloat(prompt("Introduce el precio base del producto"));
-        if (isNaN(precioBase)){
-            alert("Introduce un precio válido");
-        }
+let basePrice;
+while (isNaN(basePrice)) {
+    basePrice = parseFloat(prompt("Enter the base price of the product"));
+    if (isNaN(basePrice)) {
+        alert("Enter a valid price");
     }
-
-let iva;
-while(isNaN(iva)) {
-    iva = parseFloat(prompt("Ingresa el IVA actual de tu país (%)"));
-        if (isNaN(iva)) {
-            alert("por favor ingresa un valor numérico");
-        }
 }
 
-let conversion = iva * 0.01 + 1.0;
-let precioFinal = precioBase * conversion;
+let vat;
+while (isNaN(vat)) {
+    vat = parseFloat(prompt("Enter the current VAT rate in your country (%)"));
+    if (isNaN(vat)) {
+        alert("Please enter a numerical value");
+    }
+}
 
-alert("El precio del producto mas el iva actual del " + iva + " % es de: " + precioFinal);
+let conversion = vat * 0.01 + 1.0;
+let finalPrice = basePrice * conversion;
+
+alert("The price of the product plus the current " + vat + "% VAT is: " + finalPrice);

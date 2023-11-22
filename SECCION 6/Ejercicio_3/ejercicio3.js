@@ -3,6 +3,6 @@
 
 let n = 50;
 for (i = 0; i <= n; i++) {
-    let multiplicacion = 10 * i;
-    console.log(`10 x ${i} = ${multiplicacion}`);
+    let multiplication = 10 * i;
+    console.log(`10 x ${i} = ${multiplication}`);
 }

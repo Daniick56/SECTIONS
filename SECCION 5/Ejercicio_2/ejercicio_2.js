@@ -3,6 +3,6 @@
 
 
 for (let i = 0; i <= 50; i++) {
-    const resultado = 3 * i;
-    alert(`3 x ${i} = ${resultado}`);
+    const result = 3 * i;
+    alert(`3 x ${i} = ${result}`);
 }

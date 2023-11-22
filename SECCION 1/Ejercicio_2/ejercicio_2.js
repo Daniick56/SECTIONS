@@ -2,33 +2,33 @@
 /*2. Cree un programa que lea dos números y muestre su producto, 
 su cociente, su módulo, su suma y su resta.*/
 
-var numero1;
-while (isNaN(numero1)) {
-	numero1 = parseFloat(prompt("Ingresa el numero 1"));
-	if (isNaN(numero1)) {
-	    	alert("Por favor ingresa un valor numérico");
-	}
-}
-var numero2;
-while (isNaN(numero2)) {
-	numero2 = parseFloat(prompt("Ingresa el numero 2"));
-	if (isNaN(numero2)) {
-	    alert("Por favor ingresa un valor numérico");
-	}
-}
-let suma = numero1 + numero2;
-let resta = numero1 - numero2;
-let producto = numero1 * numero2;
-let cociente ;
-let modulo ;
-
-if (numero2 !== 0) {
-    cociente = numero1 / numero2;
-    modulo = numero1 % numero2;
-}
-else {
-    alert("No se puede dividir por cero.");
+let number1;
+while (isNaN(number1)) {
+    number1 = parseFloat(prompt("Enter number 1"));
+    if (isNaN(number1)) {
+        alert("Please enter a numerical value");
+    }
 }
 
+let number2;
+while (isNaN(number2)) {
+    number2 = parseFloat(prompt("Enter number 2"));
+    if (isNaN(number2)) {
+        alert("Please enter a numerical value");
+    }
+}
 
-alert("Suma: " + suma + "\nResta: " + resta + "\nProducto: " + producto + "\nCociente: " + cociente + "\nMódulo: " + modulo);
+let sum = number1 + number2;
+let difference = number1 - number2;
+let product = number1 * number2;
+let quotient;
+let remainder;
+
+if (number2 !== 0) {
+    quotient = number1 / number2;
+    remainder = number1 % number2;
+} else {
+    alert("Cannot divide by zero.");
+}
+
+alert("Sum: " + sum + "\nDifference: " + difference + "\nProduct: " + product + "\nQuotient: " + quotient + "\nRemainder: " + remainder);

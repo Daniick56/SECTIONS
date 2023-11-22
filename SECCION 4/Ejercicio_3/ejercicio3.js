@@ -1,15 +1,15 @@
 //EJERCICIO NUMERO 3
 /*3. Cree un programa que lea un número y muestre si éste es divisible entre cinco o no.*/let num;
-while (isNaN(num)) {
-    num = parseFloat(prompt("Ingresa el primer número"));
-        if (isNaN(num)) {
-            alert("Ingresa un valor numérico.");
-        }
+let number;
+while (isNaN(number)) {
+    number = parseFloat(prompt("Enter the number"));
+    if (isNaN(number)) {
+        alert("Enter a numerical value.");
+    }
 }
 
-if (num % 5 == 0) {
-    alert("El número sí es divisible por 5.");
-}
-else if (num % 5 != 0) {
-    alert("El número no es divisible por 5.");
+if (number % 5 === 0) {
+    alert("The number is divisible by 5.");
+} else {
+    alert("The number is not divisible by 5.");
 }

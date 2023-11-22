@@ -3,22 +3,23 @@
 y muestre al usuario el valor las
 cuotas mensuales pagando un interés fijo del 2.7% mensual.*/
 
-var monto;
-while (isNaN(monto)) {
-    monto = parseFloat(prompt("Ingrese por favor el monto a pagar"));
-    if (isNaN(monto)) {
-         alert("Ingrese un numero válido");
+let amount;
+while (isNaN(amount)) {
+    amount = parseFloat(prompt("Please enter the amount to be paid"));
+    if (isNaN(amount)) {
+         alert("Enter a valid number");
     }
 }
-var plazo;
-while (isNaN(plazo)) {
-    plazo = parseFloat(prompt("Por favor ingresa el plazo en Meses"));
-        if (isNaN(plazo)) {
-            alert("Por favor ingresa un numero válido");
+
+let term;
+while (isNaN(term)) {
+    term = parseFloat(prompt("Please enter the term in months"));
+        if (isNaN(term)) {
+            alert("Please enter a valid number");
         }
 }
 
-let cuotas = monto / plazo * 1.27;
-cuotas = cuotas.toFixed(2);
+let installments = amount / term * 1.27;
+installments = installments.toFixed(2);
 
-alert("El valor las cuotas mensuales pagando un interés fijo del 2.7% son de: " + cuotas + " pesos.");
+alert("The value of monthly installments, paying a fixed interest of 2.7%, is: " + installments + " pesos.");

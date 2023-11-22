@@ -3,14 +3,15 @@
 
 let n;
 
-while(isNaN(n)) {
-    n = parseInt(prompt("Ingresa un número para imprimir sus previos numeros naturales"));
+while (isNaN(n)) {
+    n = parseInt(prompt("Enter a number to print its previous natural numbers"));
     if (isNaN(n)) {
-        alert("Ingresa un dato numérico");
+        alert("Enter a numerical value");
     }
 }
-let text = ""
-for (i = 1; i <= n; i++) {
-    text += i + "\n"
+
+let text = "";
+for (let i = 1; i <= n; i++) {
+    text += i + "\n";
 }
 alert(text);

@@ -3,15 +3,16 @@
 
 let n;
 while (isNaN(n)) {
-    n = parseInt(prompt("Ingrese el número para mostrar sus anteriores números primos."));
-        if (isNaN(n)) {
-            alert("Ingresa un dato numérico");
-        }
+    n = parseInt(prompt("Enter the number to display its previous prime numbers."));
+    if (isNaN(n)) {
+        alert("Enter a numerical value");
+    }
 }
+
 let textOdd = "";
-for (i = 1; i <= n; i++) {
+for (let i = 1; i <= n; i++) {
     if (i % 2 === 1) {
-        textOdd += `${i}\n`
+        textOdd += `${i}\n`;
     }
 }
 alert(textOdd);

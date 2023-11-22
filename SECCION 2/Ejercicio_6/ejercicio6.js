@@ -2,22 +2,22 @@
 /*6. Cree un programa que lea una cantidad e imprima un 
 porcentaje a calcular requerido sobre esa cantidad.*/
 
-let cantidad;
-    while (isNaN(cantidad)) {
-        cantidad = parseFloat(prompt("Introduce la cantidad"));
-        if (isNaN(cantidad)) {
-            alert("Introduce un número válido");
-        }
+let amount;
+while (isNaN(amount)) {
+    amount = parseFloat(prompt("Enter the amount"));
+    if (isNaN(amount)) {
+        alert("Enter a valid number");
     }
-    
-let porcentaje;
-    while (isNaN(porcentaje)) {
-        porcentaje = parseFloat(prompt("Introduce el porcentaje a calcular"));
-        if (isNaN(porcentaje)) {
-            alert("Introduce un número válido");
-        }
+}
+
+let percentage;
+while (isNaN(percentage)) {
+    percentage = parseFloat(prompt("Enter the percentage to calculate"));
+    if (isNaN(percentage)) {
+        alert("Enter a valid number");
     }
+}
 
-    const resultado = (cantidad * porcentaje) / 100;
+const result = (amount * percentage) / 100;
 
-    alert(`El ${porcentaje}% de ${cantidad} es igual a ${resultado}`);
+alert(`The ${percentage}% of ${amount} is equal to ${result}`);

@@ -1,42 +1,30 @@
 //EJERCICIO NUMERO 4
 /*4. Cree un programa que reciba tres números y muestre el mayor. En caso de que los números sean iguales
 también se debe mostrar al usuario.*/
-let mayor;
-let text = " es el número mayor.";
-let numero1;
-while (isNaN(numero1)) {
-    numero1 = parseFloat(prompt("Ingresa el primer número"));
-        if (isNaN(numero1)) {
-            alert("Ingresa un valor numérico.");
-        }
-}
-let numero2;
-while (isNaN(numero2)) {
-    numero2 = parseFloat(prompt("Ingresa el segundo número"));
-        if (isNaN(numero2)) {
-            alert("Ingresa un valor numérico.");
-        }
-}
-let numero3;
-while (isNaN(numero3)) {
-    numero3 = parseFloat(prompt("Ingresa el tercer número"));
-        if (isNaN(numero3)) {
-            alert("Ingresa un valor numérico.");
-        }
+let greatest;
+let text = " is the greatest number.";
+function promptWhile(text) {
+    let input = parseFloat(prompt(text));
+    while (isNaN(input)) {
+        alert("Enter a numerical value.");
+        input = parseFloat(prompt(text));
+    }
+    return input;
 }
 
-if (numero1 > numero2 && numero1 > numero3) { 
-        mayor = numero1
-        alert(`${mayor}${text}`);
-    }
-    else if (numero2 > numero1 && numero2 > numero3) {
-        mayor = numero2
-        alert(`${mayor}${text}`);
-    }
-    else if (numero3 > numero2 && numero3 > numero1) {
-        mayor = numero3
-        alert(`${mayor}${text}`);
-    }
-    else {
-        alert("Los tres números son iguales.");
-    }
+let number1 = promptWhile("Enter the first number");
+let number2 = promptWhile("Enter the second number");
+let number3 = promptWhile("Enter the third number");
+
+if (number1 > number2 && number1 > number3) { 
+    greatest = number1;
+    alert(greatest + text);
+} else if (number2 > number1 && number2 > number3) {
+    greatest = number2;
+    alert(greatest + text);
+} else if (number3 > number2 && number3 > number1) {
+    greatest = number3;
+    alert(greatest + text);
+} else {
+    alert("The three numbers are equal.");
+}

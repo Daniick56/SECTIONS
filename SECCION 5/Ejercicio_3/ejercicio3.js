@@ -3,24 +3,24 @@
 let n;
 
 while (isNaN(n)) {
-    n = parseInt(prompt("Ingresa el número de estudiantes"));
+    n = parseInt(prompt("Enter the number of students"));
     if (isNaN(n)) {
-        alert("Ingresa un valor numérico");
+        alert("Enter a numerical value");
     }
 }
 
 for (let i = 1; i <= n; i++) {
-    let nota1, nota2, nota3, promedio;
-        while (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
-             nota1 = parseFloat(prompt(`Ingresa la nota 1 para el estudiante ${i}`));
-             nota2 = parseFloat(prompt(`Ingresa la nota 2 para el estudiante ${i}`));
-             nota3 = parseFloat(prompt(`Ingresa la nota 3 para el estudiante ${i}`));
+    let grade1, grade2, grade3, average;
+    while (isNaN(grade1) || isNaN(grade2) || isNaN(grade3)) {
+        grade1 = parseFloat(prompt(`Enter grade 1 for student ${i}`));
+        grade2 = parseFloat(prompt(`Enter grade 2 for student ${i}`));
+        grade3 = parseFloat(prompt(`Enter grade 3 for student ${i}`));
 
-        if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
-            alert("Ingresa un valor numérico");
+        if (isNaN(grade1) || isNaN(grade2) || isNaN(grade3)) {
+            alert("Enter a numerical value");
         }
     }
-    promedio = ((nota1 + nota2 + nota3) / 3).toFixed(1);
+    average = ((grade1 + grade2 + grade3) / 3).toFixed(1);
 
-    alert(`El promedio del estudiante ${i} es ${promedio}`);
+    alert(`The average grade for student ${i} is ${average}`);
 }

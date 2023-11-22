@@ -18,3 +18,5 @@ for (i = 1; i <= 50; i++) {
     numbers.push(promptWhile(`Ingresa el número ${i}`))
 }
 
+
+while !=0

@@ -2,27 +2,26 @@
 /*3. Cree un programa que reciba dos números y muestre el mayor. En caso de que los números sean iguales
 también se debe mostrar al usuario*/
 
-let numero1;
-while (isNaN(numero1)) {
-    numero1 = parseFloat(prompt("Ingresa el primer número"));
-        if (isNaN(numero1)) {
-            alert("Ingresa un valor numérico.");
-        }
-}
-let numero2;
-while (isNaN(numero2)) {
-    numero2 = parseFloat(prompt("Ingresa el segundo número"));
-        if (isNaN(numero2)) {
-            alert("Ingresa un valor numérico.");
-        }
+let number1;
+while (isNaN(number1)) {
+    number1 = parseFloat(prompt("Enter the first number"));
+    if (isNaN(number1)) {
+        alert("Enter a numerical value.");
+    }
 }
 
-if (numero1 < numero2) {
-    alert(`${numero1} es menor que ${numero2}`);
+let number2;
+while (isNaN(number2)) {
+    number2 = parseFloat(prompt("Enter the second number"));
+    if (isNaN(number2)) {
+        alert("Enter a numerical value.");
+    }
 }
-else if (numero1 > numero2) {
-    alert(`${numero1} es mayor que ${numero2}`);
-}
-else {
-    alert(`${numero1} es igual a ${numero2}`);
+
+if (number1 < number2) {
+    alert(`${number1} is less than ${number2}`);
+} else if (number1 > number2) {
+    alert(`${number1} is greater than ${number2}`);
+} else {
+    alert(`${number1} is equal to ${number2}`);
 }

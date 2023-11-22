@@ -1,33 +1,24 @@
 //EJERCICIO NUMERO 1
 /*1. Cree un programa que lea los tres ángulos internos de un triángulo y muestre si los ángulos corresponden a un
 triángulo o no.*/
-let suma;
-let angulo1;
-while (isNaN(angulo1)) {
-    angulo1 = parseFloat(prompt("Ingresa el primer número"));
-        if (isNaN(angulo1)) {
-            alert("Ingresa un valor numérico.");
-        }
-}
-let angulo2;
-while (isNaN(angulo2)) {
-    angulo2 = parseFloat(prompt("Ingresa el segundo número"));
-        if (isNaN(angulo2)) {
-            alert("Ingresa un valor numérico.");
-        }
-}
-let angulo3;
-while (isNaN(angulo3)) {
-    angulo3 = parseFloat(prompt("Ingresa el tercer número"));
-        if (isNaN(angulo3)) {
-            alert("Ingresa un valor numérico.");
-        }
+let sum;
+
+function promptWhile(text) {
+    let input = parseFloat(prompt(text));
+    while (isNaN(input)) {
+        alert("Enter a numerical value.");
+        input = parseFloat(prompt(text));
+    }
+    return input;
 }
 
-suma = angulo1 + angulo2 + angulo3;
-if (suma == 180) {
-    alert("Sí es un triángulo.");
-}
-else {
-    alert("No es un triángulo.");
+let angle1 = promptWhile("Enter the first interior angle of the triangle");
+let angle2 = promptWhile("Enter the second interior angle of the triangle");
+let angle3 = promptWhile("Enter the third interior angle of the triangle");
+
+sum = angle1 + angle2 + angle3;
+if (sum === 180) {
+    alert("It is a triangle.");
+} else {
+    alert("It is not a triangle.");
 }
