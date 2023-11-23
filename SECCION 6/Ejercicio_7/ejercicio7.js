@@ -7,16 +7,30 @@ introduzca el cero.
 function promptWhile(text) {
     let input = parseFloat(prompt(text));
     while (isNaN(input)) {
-        alert("Ingrese un número válido");
+        alert("Enter a numerical value");
         input = parseFloat(prompt(text));
     }
     return input;
 }
 
-let numbers [];
-for (i = 1; i <= 50; i++) {
-    numbers.push(promptWhile(`Ingresa el número ${i}`))
+let numbers = [];
+let currentNumber;
+
+do {
+    currentNumber = promptWhile("Enter a number to calculate the average. (Enter 0 to finish)");
+    if (currentNumber !== 0) {
+        numbers.push(currentNumber);
+    }
+}
+while (currentNumber !== 0)
+
+function average (numbers) {
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    return sum / numbers.length;
 }
 
-
-while !=0
+let result = average(numbers);
+console.log(`The average of the numbers are ${result}`);
